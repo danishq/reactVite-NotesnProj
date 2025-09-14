@@ -1,0 +1,94 @@
+body {
+    background: #121213;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: #1a1a1b;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    max-width: 600px;
+    width: 90vw;
+}
+
+.line {
+    display: flex;
+    gap: 10px;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    max-width: 15vw;
+    max-height: 15vw;
+    border: 2px solid #3a3a3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #121213;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.correct {
+    background-color: #6aaa64;
+    border-color: #6aaa64;
+    color: #ffffff;
+    animation: pop 0.3s ease;
+}
+
+.close {
+    background-color: #c9b458;
+    border-color: #c9b458;
+    color: #ffffff;
+    animation: pop 0.3s ease;
+}
+
+.incorrect {
+    background-color: #3a3a3c;
+    border-color: #3a3a3c;
+    color: #ffffff;
+    animation: pop 0.3s ease;
+}
+
+/* Tile Pop Animation */
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Font for Smaller Screens */
+@media (max-width: 500px) {
+    .tile {
+        width: 12vw;
+        height: 12vw;
+        font-size: 1.2rem;
+    }
+}
+
