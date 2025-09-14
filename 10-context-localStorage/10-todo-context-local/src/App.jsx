@@ -52,6 +52,7 @@ function App() {
 
                     <div className='flex flex-wrap gap-y-3'>
                         {/* Loop and Add Todo Item goes here*/}
+                        {/* Loop and Add Todo Item goes here*/}
 
                         {todos.map((todo) => {
                             return (
