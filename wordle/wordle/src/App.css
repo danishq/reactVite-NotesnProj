@@ -4,9 +4,22 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
+    //align-items: center;
+    //min-height: 100vh;
+    //margin: 0;
+}
+
+.wordleHeading{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
+    margin: 5vh;
+    font-size:60px
+}
+
+#showHintTrue{
+    margin: 10px auto;
+    width: 30em;
 }
 
 .board {
@@ -14,14 +27,60 @@ body {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    justify-items: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
+    margin: 30px;
     border-radius: 15px;
     background: #1a1a1b;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    max-width: 600px;
-    width: 90vw;
+    width: 45vw;
+    min-height: 45vh;
 }
+
+/* From Uiverse.io by cssbuttons-io */ 
+button{
+    display: flex;
+    margin: 10px auto;
+    justify-content:center;
+    align-items: center;
+}
+.btn {
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 6em;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: black;
+  background-color:whitesmoke;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 
 .line {
     display: flex;
