@@ -71,6 +71,7 @@ export default function App() {
                     })
                 }
             </div>
+
             <button type="submit" className='btn' onClick={() => window.location.reload()}>New Wordle</button>
         </div>
     )
@@ -79,20 +80,20 @@ export default function App() {
 function Line({ guess, isFinal, solution }) {
     const tiles = [];
     for (let i = 0; i < WORD_LENGTH; i++) {
-        const char = guess[i]
+        //const char = guess[i]
         let className = 'tile';
         if (isFinal) {
-            if (char === solution[i]) {
+            if (guess[i] === solution[i]) {
                 className += ' correct'
             }
-            else if (solution.includes(char)) {
+            else if (solution.includes(guess[i])) {
                 className += ' close'
             }
             else {
                 className += ' incorrect'
             }
         }
-        tiles.push(<div key={i} className={className}>{char}</div>);
+        tiles.push(<div key={i} className={className}>{guess[i]}</div>);
     }
 
 
@@ -102,3 +103,4 @@ function Line({ guess, isFinal, solution }) {
         </div>
     )
 }
+
