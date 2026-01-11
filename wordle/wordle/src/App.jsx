@@ -3,7 +3,7 @@ import { generate } from 'random-words';
 import './App.css'
 import useKeyboardInput from './hooks/useKeyboardInput';
 
-const WORD_LENGTH = 5;
+const wordLength = 5;
 
 export default function App() {
 
@@ -30,7 +30,7 @@ export default function App() {
     useEffect(() => {
         if (didRun.current) return;
         didRun.current = true;
-        const randomWord = generate({ minLength: WORD_LENGTH, maxLength: WORD_LENGTH })
+        const randomWord = generate({ minLength: wordLength, maxLength: wordLength })
         setSolution(randomWord)
         console.log(`Solution is ${randomWord}`)
         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${randomWord}`)
@@ -79,7 +79,7 @@ export default function App() {
 
 function Line({ guess, isFinal, solution }) {
     const tiles = [];
-    for (let i = 0; i < WORD_LENGTH; i++) {
+    for (let i = 0; i < wordLength; i++) {
         //const char = guess[i]
         let className = 'tile';
         if (isFinal) {
